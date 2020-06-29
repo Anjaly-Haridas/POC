@@ -1,0 +1,137 @@
+{
+	"name": "CopyPipeline_14",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_6ij",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "rawfiles/input/claim.csv"
+					},
+					{
+						"name": "Destination",
+						"value": "Claimoutput"
+					}
+				],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings",
+							"skipLineCount": 0
+						}
+					},
+					"sink": {
+						"type": "AzureTableSink",
+						"azureTableInsertType": "merge",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Claim_id",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Claim_id",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Policy_number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Policy_number",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Claim_start_date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Claim_start_date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Date of Claim",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date of Claim",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Claim_amount",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Claim_amount",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "claim_status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "claim_status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Customer_feedback",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Customer_feedback",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "SourceDataset_6ij",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DestinationDataset_6ij",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

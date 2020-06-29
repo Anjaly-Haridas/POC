@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_24v",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureTableStorage5",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "Claim"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

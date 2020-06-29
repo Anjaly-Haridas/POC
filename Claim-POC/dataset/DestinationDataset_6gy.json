@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_6gy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureTableStorage6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "Policy"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_6ij",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureTableStorage6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "Claimoutput"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

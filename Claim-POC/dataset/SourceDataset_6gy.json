@@ -1,0 +1,54 @@
+{
+	"name": "SourceDataset_6gy",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "policy.csv",
+				"folderPath": "input",
+				"container": "rawfiles"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Policy_id",
+				"type": "String"
+			},
+			{
+				"name": "policy_number",
+				"type": "String"
+			},
+			{
+				"name": "Policy_type",
+				"type": "String"
+			},
+			{
+				"name": "Customer_id",
+				"type": "String"
+			},
+			{
+				"name": "policy_start_date",
+				"type": "String"
+			},
+			{
+				"name": "Status",
+				"type": "String"
+			},
+			{
+				"name": "policy_annual_premium",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

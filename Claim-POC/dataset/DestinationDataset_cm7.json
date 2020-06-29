@@ -1,0 +1,16 @@
+{
+	"name": "DestinationDataset_cm7",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureTableStorage4",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureTable",
+		"schema": [],
+		"typeProperties": {
+			"tableName": "Claimoutput"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
