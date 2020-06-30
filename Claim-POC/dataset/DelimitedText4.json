@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "auto_insurance",
 				"folderPath": "temp",
 				"container": "rawfiles"
 			},
