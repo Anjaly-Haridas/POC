@@ -19,7 +19,7 @@
 					"value": "@dataset().file",
 					"type": "Expression"
 				},
-				"folderPath": "input",
+				"folderPath": "temp",
 				"container": "rawfiles"
 			},
 			"columnDelimiter": ",",
