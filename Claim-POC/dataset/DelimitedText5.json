@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "claim_data.csv",
-				"folderPath": "input",
+				"fileName": "auto_insurance.csv",
+				"folderPath": "temp",
 				"container": "rawfiles"
 			},
 			"columnDelimiter": ",",
